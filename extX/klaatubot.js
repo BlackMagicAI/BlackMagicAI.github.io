@@ -9,8 +9,8 @@
     };
 
     // send bluetooth command to klaatubot
-    ext.send_cmd = function() {
-            console.log("send_cmd")
+    ext.send_cmd = function(cmd) {
+            console.log("send_cmd:" + cmd)
         };
 
     // Block and block menu descriptions
