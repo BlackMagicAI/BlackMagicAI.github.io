@@ -17,7 +17,7 @@
     var descriptor = {
         blocks: [
           // Block type, block name, function name
-          [' ', 'Klaatubot Send Cmd', 'send_cmd'],
+          [' ', 'Klaatubot Send Cmd %s', 'send_cmd', 'e0,0,'],
         ]
     };
 
