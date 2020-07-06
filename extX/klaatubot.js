@@ -1,76 +1,76 @@
 // Current bug with Scratch link needs to be fixed before this code can be tested
 // https://scratch.mit.edu/discuss/topic/419098/?page=1#post-4183792
-(function(ext) {
+(function (ext) {
     // Cleanup function when the extension is unloaded
-    ext._shutdown = function() {};
+    ext._shutdown = function () { };
 
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
-    ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
+    ext._getStatus = function () {
+        return { status: 2, msg: 'Ready' };
     };
 
     // send bluetooth command to klaatubot
-    ext.send_cmd = function(cmd) {
-            console.log("send_cmd:" + cmd)
-            //initBT();
-        };
+    ext.send_cmd = function (cmd) {
+        console.log("send_cmd:" + cmd)
+        //initBT();
+    };
 
-        // e command string
-    ext.e_cmd = function(val1, val2) {
-        cmdStr = "e" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // e command string
+    ext.e_cmd = function (val1, val2) {
+        cmdStr = "e" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
-                // f command string
-    ext.f_cmd = function(val1, val2) {
-        cmdStr = "f" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // f command string
+    ext.f_cmd = function (val1, val2) {
+        cmdStr = "f" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
-                // g command string
-    ext.g_cmd = function(val1, val2) {
-        cmdStr = "g" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // g command string
+    ext.g_cmd = function (val1, val2) {
+        cmdStr = "g" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
-                // h command string
-    ext.h_cmd = function(val1, val2) {
-        cmdStr = "h" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // h command string
+    ext.h_cmd = function (val1, val2) {
+        cmdStr = "h" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
-                // i command string
-    ext.i_cmd = function(val1, val2) {
-        cmdStr = "i" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // i command string
+    ext.i_cmd = function (val1, val2) {
+        cmdStr = "i" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
-                // j command string
-    ext.j_cmd = function(val1, val2) {
-        cmdStr = "j" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // j command string
+    ext.j_cmd = function (val1, val2) {
+        cmdStr = "j" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
-                // l command string
-    ext.l_cmd = function(val1, val2) {
-        cmdStr = "l" + val1 + "," +val2 + ","
-            return cmdStr;
-        };
+    // l command string
+    ext.l_cmd = function (val1, val2) {
+        cmdStr = "l" + val1 + "," + val2 + ","
+        return cmdStr;
+    };
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-          // Block type, block name, function name
-          [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
-          // Block type, block name, function name, param1 default value, param2 default value
-          ['r', 'e%s,%s,', 'e_cmd', '0', '0'],
-          ['r', 'f%s,%s,', 'f_cmd', '0', '0'],
-          ['r', 'g%s,%s,', 'g_cmd', '0', '0'],
-          ['r', 'h%s,%s,', 'h_cmd', '0', '0'],
-          ['r', 'i%s,%s,', 'i_cmd', '0', '0'],
-          ['r', 'j%s,%s,', 'j_cmd', '0', '0'],
-          ['r', 'l%s,%s,', 'l_cmd', '0', '0'],
+            // Block type, block name, function name
+            [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
+            // Block type, block name, function name, param1 default value, param2 default value
+            ['r', 'e%s,%s,', 'e_cmd', '0', '0'],
+            ['r', 'f%s,%s,', 'f_cmd', '0', '0'],
+            ['r', 'g%s,%s,', 'g_cmd', '0', '0'],
+            ['r', 'h%s,%s,', 'h_cmd', '0', '0'],
+            ['r', 'i%s,%s,', 'i_cmd', '0', '0'],
+            ['r', 'j%s,%s,', 'j_cmd', '0', '0'],
+            ['r', 'l%s,%s,', 'l_cmd', '0', '0'],
         ]
     };
 
@@ -250,12 +250,12 @@ class ScratchBLE extends JSONRPCWebSocket {
 
     didReceiveCall(method, params) {
         switch (method) {
-        case 'didDiscoverPeripheral':
-            addLine(`Peripheral discovered: ${stringify(params)}`);
-            this.discoveredPeripheralId = params['peripheralId'];
-            break;
-        case 'ping':
-            return 42;
+            case 'didDiscoverPeripheral':
+                addLine(`Peripheral discovered: ${stringify(params)}`);
+                this.discoveredPeripheralId = params['peripheralId'];
+                break;
+            case 'ping':
+                return 42;
         }
     }
 
@@ -508,7 +508,7 @@ function connectBLE() {
 }
 
 function getServicesBLE() {
-    Scratch.BLE.sendRemoteRequest (
+    Scratch.BLE.sendRemoteRequest(
         'getServices'
     ).then(
         x => {
@@ -676,7 +676,7 @@ function stringify(o) {
 // attachFunctionToButton('beep', beep);
 
 class LogDisplay {
-    constructor (logElement, lineCount = 256) {
+    constructor(logElement, lineCount = 256) {
         this._logElement = logElement;
         this._lineCount = lineCount;
         this._lines = [];
@@ -684,7 +684,7 @@ class LogDisplay {
         this._follow = true;
     }
 
-    addLine (text) {
+    addLine(text) {
         this._lines.push(text);
         if (!this._dirty) {
             this._dirty = true;
@@ -699,7 +699,7 @@ class LogDisplay {
         }
     }
 
-    _trim () {
+    _trim() {
         this._lines = this._lines.splice(-this._lineCount);
     }
 }
