@@ -16,10 +16,45 @@
             //initBT();
         };
 
-        // send bluetooth command to klaatubot
-    ext.fwd_cmd = function(val1, val2) {
+        // e command string
+    ext.e_cmd = function(val1, val2) {
         cmdStr = "e" + val1 + "," +val2 + ","
-            console.log("fwd_cmd:" + cmdStr);
+            return cmdStr;
+        };
+
+                // f command string
+    ext.f_cmd = function(val1, val2) {
+        cmdStr = "f" + val1 + "," +val2 + ","
+            return cmdStr;
+        };
+
+                // g command string
+    ext.g_cmd = function(val1, val2) {
+        cmdStr = "g" + val1 + "," +val2 + ","
+            return cmdStr;
+        };
+
+                // h command string
+    ext.h_cmd = function(val1, val2) {
+        cmdStr = "h" + val1 + "," +val2 + ","
+            return cmdStr;
+        };
+
+                // i command string
+    ext.i_cmd = function(val1, val2) {
+        cmdStr = "i" + val1 + "," +val2 + ","
+            return cmdStr;
+        };
+
+                // j command string
+    ext.j_cmd = function(val1, val2) {
+        cmdStr = "j" + val1 + "," +val2 + ","
+            return cmdStr;
+        };
+
+                // l command string
+    ext.l_cmd = function(val1, val2) {
+        cmdStr = "l" + val1 + "," +val2 + ","
             return cmdStr;
         };
 
@@ -27,9 +62,15 @@
     var descriptor = {
         blocks: [
           // Block type, block name, function name
-          [' ', 'Klaatubot Send Cmd %s', 'send_cmd', 'e0,0,'],
+          [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
           // Block type, block name, function name, param1 default value, param2 default value
-          ['r', 'e%s,%s,', 'fwd_cmd', '0', '0'],
+          ['r', 'e%s,%s,', 'e_cmd', '0', '0'],
+          ['r', 'f%s,%s,', 'f_cmd', '0', '0'],
+          ['r', 'g%s,%s,', 'g_cmd', '0', '0'],
+          ['r', 'h%s,%s,', 'h_cmd', '0', '0'],
+          ['r', 'i%s,%s,', 'i_cmd', '0', '0'],
+          ['r', 'j%s,%s,', 'j_cmd', '0', '0'],
+          ['r', 'l%s,%s,', 'l_cmd', '0', '0'],
         ]
     };
 
