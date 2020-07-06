@@ -1,3 +1,5 @@
+// Current bug with Scratch link needs to be fixed before this code can be tested
+// https://scratch.mit.edu/discuss/topic/419098/?page=1#post-4183792
 (function(ext) {
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -19,6 +21,8 @@
         blocks: [
           // Block type, block name, function name
           [' ', 'Klaatubot Send Cmd %s', 'send_cmd', 'e0,0,'],
+          // Block type, block name, function name, param1 default value, param2 default value
+          ['r', 'e%s,%s', 'Fwd', '0', '0'],
         ]
     };
 
