@@ -13,7 +13,7 @@
     // send bluetooth command to klaatubot
     ext.send_cmd = function(cmd) {
             console.log("send_cmd:" + cmd)
-            initBT();
+            //initBT();
         };
 
         // send bluetooth command to klaatubot
