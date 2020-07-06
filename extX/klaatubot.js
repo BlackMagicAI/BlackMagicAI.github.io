@@ -20,7 +20,7 @@
     ext.fwd_cmd = function(val1, val2) {
         cmdStr = "e" + val1 + "," +val2 + ","
             console.log("fwd_cmd:" + cmdStr);
-            return cmdStr;
+            return "test";
         };
 
     // Block and block menu descriptions
