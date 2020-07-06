@@ -29,7 +29,7 @@
           // Block type, block name, function name
           [' ', 'Klaatubot Send Cmd %s', 'send_cmd', 'e0,0,'],
           // Block type, block name, function name, param1 default value, param2 default value
-          ['r', 'f%s,%s,', 'Fwd', '0', '0'],
+          ['r', 'e%s,%s,', 'Fwd_cmd', '0', '0'],
         ]
     };
 
