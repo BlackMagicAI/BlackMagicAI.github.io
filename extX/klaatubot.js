@@ -16,13 +16,20 @@
             initBT();
         };
 
+        // send bluetooth command to klaatubot
+    ext.fwd_cmd = function(val1, val2) {
+        cmdStr = "e" + val1 + "," +val2 + ","
+            console.log("fwd_cmd:" + cmdStr);
+            return cmd;
+        };
+
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
           // Block type, block name, function name
           [' ', 'Klaatubot Send Cmd %s', 'send_cmd', 'e0,0,'],
           // Block type, block name, function name, param1 default value, param2 default value
-          ['r', 'e%s,%s', 'Fwd', '0', '0'],
+          ['r', 'f%s,%s,', 'Fwd', '0', '0'],
         ]
     };
 
