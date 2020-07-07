@@ -58,19 +58,26 @@
         return cmdStr;
     };
 
+    // l command string
+    ext.m_cmd = function () {
+        cmdStr = "m0,0,"
+        return cmdStr;
+    };
+
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             // Block type, block name, function name
             [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
             // Block type, block name, function name, param1 default value, param2 default value
-            ['r', 'e%s,%s,', 'e_cmd', '0', '0'],
-            ['r', 'f%s,%s,', 'f_cmd', '0', '0'],
-            ['r', 'g%s,%s,', 'g_cmd', '0', '0'],
-            ['r', 'h%s,%s,', 'h_cmd', '0', '0'],
-            ['r', 'i%s,%s,', 'i_cmd', '0', '0'],
-            ['r', 'j%s,%s,', 'j_cmd', '0', '0'],
-            ['r', 'l%s,%s,', 'l_cmd', '0', '0'],
+            ['r', 'Servo 0%s,%s,', 'e_cmd', '0', '0'],
+            ['r', 'Servo 1%s,%s,', 'f_cmd', '0', '0'],
+            ['r', 'Servo 2%s,%s,', 'g_cmd', '0', '0'],
+            ['r', 'Digital Output 3%s,%s,', 'h_cmd', '0', '0'],
+            ['r', 'Digital Output 4%s,%s,', 'i_cmd', '0', '0'],
+            ['r', 'Digital Output 5%s,%s,', 'j_cmd', '0', '0'],
+            ['r', 'Stop All Motors%s,%s,', 'l_cmd', '0', '0'],
+            ['r', 'Read A/D Inputs', 'm_cmd'],
         ]
     };
 
