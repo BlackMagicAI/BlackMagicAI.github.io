@@ -76,7 +76,7 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
-            [' ', 'Klaatubot Send Command %m', 'send_cmds', 'A', 'B','C'],
+            [' ', 'Klaatubot Send Command %m.commands', 'send_cmds'],
             // Block type, block name, function name, param1 default value, param2 default value
             ['r', 'Servo 0%s,%s,', 'e_cmd', '0', '0'],
             ['r', 'Servo 1%s,%s,', 'f_cmd', '0', '0'],
@@ -86,7 +86,11 @@
             ['r', 'Digital Output 5%s,%s,', 'j_cmd', '0', '0'],
             ['r', 'Stop All Motors%s,%s,', 'l_cmd', '0', '0'],
             ['r', 'Read A/D Inputs', 'm_cmd'],
-        ]
+        ],
+        menus: {
+            commands: ['A', 'B', 'C']
+        },
+        displayName: 'Klaatubot 1.0'
     };
 
     // Register the extension
