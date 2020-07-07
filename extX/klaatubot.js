@@ -76,7 +76,7 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
-            [' ', 'Klaatubot Send Command %m.commands', 'send_cmds', 'A'],
+            [' ', 'Klaatubot Send Command %m.commands %s,%s', 'send_cmds', 'Servo 0'],
             // Block type, block name, function name, param1 default value, param2 default value
             ['r', 'Servo 0%s,%s,', 'e_cmd', '0', '0'],
             ['r', 'Servo 1%s,%s,', 'f_cmd', '0', '0'],
@@ -88,7 +88,7 @@
             ['r', 'Read A/D Inputs', 'm_cmd']
         ],
         menus: {
-            commands: ['A', 'B', 'C']
+            commands: ['Servo 0', 'Servo 1', 'Servo 2', 'Digital Output 3', 'Digital Output 4', 'Digital Output 5', 'Stop All Motors', 'Read A/D Inputs']
         },
         displayName: 'Klaatubot 1.0'
     };
