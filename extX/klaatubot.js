@@ -76,7 +76,7 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
-            [' ', 'Klaatubot Send Command %m.commands %s,%s', 'send_cmds', 'Servo 0'],
+            [' ', 'Klaatubot Send Command %m.commands %s,%s,', 'send_cmds', 'Servo 0', '0','0'],
             // Block type, block name, function name, param1 default value, param2 default value
             ['r', 'Servo 0%s,%s,', 'e_cmd', '0', '0'],
             ['r', 'Servo 1%s,%s,', 'f_cmd', '0', '0'],
