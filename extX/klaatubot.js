@@ -13,19 +13,19 @@
 
     // send bluetooth command to klaatubot
     ext.send_cmd = function (cmd) {
-        console.log("send_cmd:" + cmd)
+        console.log("send_cmd:" + cmd);
         //initBT();
     };
 
     // send bluetooth command to klaatubot
-    ext.send_cmds = function (cmd) {
-        console.log("send_cmds:" + cmd)
+    ext.send_cmds = function (cmd, val1, val2) {
+        console.log("send_cmds:" + cmd + "," + val1 + "," + val2);
         //initBT();
     };
 
     // e command string
     ext.e_cmd = function (val1, val2) {
-        cmdStr = "e" + val1 + "," + val2 + ","
+        cmdStr = "e" + val1 + "," + val2 + ",";
         return cmdStr;
     };
 
@@ -37,37 +37,37 @@
 
     // g command string
     ext.g_cmd = function (val1, val2) {
-        cmdStr = "g" + val1 + "," + val2 + ","
+        cmdStr = "g" + val1 + "," + val2 + ",";
         return cmdStr;
     };
 
     // h command string
     ext.h_cmd = function (val1, val2) {
-        cmdStr = "h" + val1 + "," + val2 + ","
+        cmdStr = "h" + val1 + "," + val2 + ",";
         return cmdStr;
     };
 
     // i command string
     ext.i_cmd = function (val1, val2) {
-        cmdStr = "i" + val1 + "," + val2 + ","
+        cmdStr = "i" + val1 + "," + val2 + ",";
         return cmdStr;
     };
 
     // j command string
     ext.j_cmd = function (val1, val2) {
-        cmdStr = "j" + val1 + "," + val2 + ","
+        cmdStr = "j" + val1 + "," + val2 + ",";
         return cmdStr;
     };
 
     // l command string
     ext.l_cmd = function (val1, val2) {
-        cmdStr = "l" + val1 + "," + val2 + ","
+        cmdStr = "l" + val1 + "," + val2 + ",";
         return cmdStr;
     };
 
     // l command string
     ext.m_cmd = function () {
-        cmdStr = "m0,0,"
+        cmdStr = "m0,0,";
         return cmdStr;
     };
 
