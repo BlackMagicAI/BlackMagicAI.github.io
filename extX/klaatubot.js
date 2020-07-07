@@ -1,5 +1,6 @@
 // Current bug with Scratch link needs to be fixed before this code can be tested
 // https://scratch.mit.edu/discuss/topic/419098/?page=1#post-4183792
+// https://github.com/LLK/scratchx/wiki#writing-extensions-for-scratchx
 (function (ext) {
     // Cleanup function when the extension is unloaded
     ext._shutdown = function () { };
@@ -13,6 +14,12 @@
     // send bluetooth command to klaatubot
     ext.send_cmd = function (cmd) {
         console.log("send_cmd:" + cmd)
+        //initBT();
+    };
+
+    // send bluetooth command to klaatubot
+    ext.send_cmds = function (cmd) {
+        console.log("send_cmds:" + cmd)
         //initBT();
     };
 
@@ -69,6 +76,7 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
+            [' ', 'Klaatubot Send Command %m', 'send_cmds', 'A', 'B','C'],
             // Block type, block name, function name, param1 default value, param2 default value
             ['r', 'Servo 0%s,%s,', 'e_cmd', '0', '0'],
             ['r', 'Servo 1%s,%s,', 'f_cmd', '0', '0'],
