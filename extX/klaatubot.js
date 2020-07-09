@@ -23,28 +23,28 @@
         cmdStr = "";
         switch (cmd) {
             case 'Servo 0':
-                cmdStr = ext.e_cmd();
+                cmdStr = ext.e_cmd(val1, val2);
                 break;
             case 'Servo 1':
-                    cmdStr = ext.f_cmd();
+                    cmdStr = ext.f_cmd(val1, val2);
                 break;
             case 'Servo 2':
-                    cmdStr = ext.g_cmd();
+                    cmdStr = ext.g_cmd(val1, val2);
                 break;
             case 'Digital Output 3':
-                    cmdStr = ext.h_cmd();
+                    cmdStr = ext.h_cmd(val1, val2);
                 break;
             case 'Digital Output 4':
-                    cmdStr = ext.i_cmd();
+                    cmdStr = ext.i_cmd(val1, val2);
                 break;
             case 'Digital Output 5':
-                    cmdStr = ext.j_cmd();
+                    cmdStr = ext.j_cmd(val1, val2);
                 break;
             case 'Stop All Motors':
-                    cmdStr = ext.l_cmd();
+                    cmdStr = ext.l_cmd(val1, val2);
                 break;
             case 'Read A/D Inputs':
-                    cmdStr = ext.m_cmd();
+                    cmdStr = ext.m_cmd(val1, val2);
                 break;
             default:
             // code block
