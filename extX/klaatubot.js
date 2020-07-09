@@ -23,7 +23,7 @@
         cmdStr = "";
         switch (cmd) {
             case 'Servo 0':
-                cmdStr = e_cmd(val1, val2);
+                cmdStr = ext.e_cmd(val1, val2);
                 break;
             case 'Servo 1':
                     cmdStr = ext.f_cmd(val1, val2);
