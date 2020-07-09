@@ -19,7 +19,38 @@
 
     // send bluetooth command to klaatubot
     ext.send_cmds = function (cmd, val1, val2) {
-        console.log("send_cmds:" + cmd + "," + val1 + "," + val2);
+        //console.log("send_cmds:" + cmd + "," + val1 + "," + val2);
+        cmdStr = "";
+        switch (cmd) {
+            case 'Servo 0':
+                cmdStr = ext.e_cmd();
+                break;
+            case 'Servo 1':
+                    cmdStr = ext.f_cmd();
+                break;
+            case 'Servo 2':
+                    cmdStr = ext.g_cmd();
+                break;
+            case 'Digital Output 3':
+                    cmdStr = ext.h_cmd();
+                break;
+            case 'Digital Output 4':
+                    cmdStr = ext.i_cmd();
+                break;
+            case 'Digital Output 5':
+                    cmdStr = ext.j_cmd();
+                break;
+            case 'Stop All Motors':
+                    cmdStr = ext.l_cmd();
+                break;
+            case 'Read A/D Inputs':
+                    cmdStr = ext.m_cmd();
+                break;
+            default:
+            // code block
+        }
+        console.log("send_cmds:" + cmdStr)
+        return cmdStr;
         //initBT();
     };
 
@@ -76,7 +107,7 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'Klaatubot Send Cmd %s', 'send_cmd', ''],
-            [' ', 'Klaatubot Send Command %m.commands %s,%s', 'send_cmds', 'Servo 0', '0','0'],
+            [' ', 'Klaatubot Send Command %m.commands %s,%s', 'send_cmds', 'Servo 0', '0', '0'],
             // Block type, block name, function name, param1 default value, param2 default value
             ['r', 'Servo 0%s,%s,', 'e_cmd', '0', '0'],
             ['r', 'Servo 1%s,%s,', 'f_cmd', '0', '0'],
